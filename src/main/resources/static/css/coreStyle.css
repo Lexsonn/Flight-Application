@@ -1,0 +1,150 @@
+:root {
+  --blue: #4466FF;
+  --backblue: #DDEEFF;
+  --lightblue: #CCCCFF;
+  --darkblue: #223366;
+  --skyblue: #88AADD;
+  --teal: #88DDFF;
+  --white: #FFFFFF;
+  --lightgray: #EEEEEE;
+  --gray: #AAAAAA;
+  --darkgray: #666666;
+  --black: #000000;
+  --light: #EEEEFF;
+  --mint: #CCFFCC;
+  --brightgreen: #99FF99;
+  --green: #66EE66;
+  --leafgreen: #33AA33;
+  --darkgreen: #115511;
+  --backpurple: #FFEEFF;
+  --brightpurple: #CC99FF;
+  --lightpurple: #AA77FF;
+  --purple: #844DEF;
+  --darkpurple: #6622AA;
+  --brightred: #FF9999;
+  --salmon: #EE6666;
+  --red: #DD3333;
+  --darkred: #991111;
+  --mid: #243599;
+  --dark: #110033;
+  --backcolor: #66AAFF;
+}
+
+html, body {
+	height: 100%;
+	margin: 0;
+	padding: 0;
+}
+
+#map {
+	height: 100vh;
+	width: 100%;
+}
+
+body {
+  background-color: var(--backcolor);
+}
+
+.spacer {
+  margin-bottom: 15px;
+}
+
+.btn {
+  background-color: var(--darkblue);
+}
+
+.btn-default-active, .btn:hover  {
+  background-color: var(--blue);
+}
+
+.btn-default.active.focus, .btn-default.active:focus,
+.btn-default:active.focus, .btn-default:active:focus {
+  color: var(--dark);
+  background-color: var(--light);
+}
+
+.dropdown-toggle:hover, .open>.dropdown-toggle.btn-default:focus,
+.open>.dropdown-toggle.btn-default.focus {
+  color: var(--light);
+  background-color: var(--darkgreen);
+  border-color: var(--darkgreen);
+}
+
+.btn-default.active, .btn-default:active,
+.btn-default.active:hover, .btn-default.inactive {
+  color: var(--light);
+  background-color: var(--mid);
+}
+
+.open>.dropdown-toggle.btn-default,  .open>.dropdown-toggle.btn-default:hover {
+  background-color: var(--leafgreen);
+  border-color: var(--leafgreen);
+}
+
+.dropdown-toggle {
+  color: var(--light);
+  background-color: var(--darkgreen);
+  border-color: var(--darkgreen);
+}
+
+.dropdown-toggle:hover {
+  color: var(--light);
+  background-color: var(--leafgreen);
+  border-color: var(--leafgreen);
+}
+
+.jumbotron {
+  background-color: var(--white);
+  color: var(--dark);
+}
+
+.jumbotron.smaller {
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+
+.jumbotron.smallest {
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
+
+.dropdown-menu {
+  background-color: var(--mint);
+}
+
+.dropdown-menu:hover {
+   color: var(--brightgreen);
+}
+
+.dropdown-menu>li>a {
+  color: var(--dark);
+  background-color: var(--mint);
+}
+
+.dropdown-menu>li>a:hover {
+  color: var(--dark);
+  background-color: var(--brightgreen);
+}
+
+.list-group-item, a.list-group-item {
+  color: var(--dark);
+  background-color: var(--white)
+}
+
+.hilightblue:hover, a.hilightblue:hover {
+  color: var(--light);
+  background-color: var(--blue);
+  border-color: var(--blue);
+}
+
+.hilightpurple:hover, a.hilightpurple:hover {
+  color: var(--light);
+  background-color: var(--purple);
+  border-color: var(--purple);
+}
+
+.hilightgreen:hover, a.hilightgreen:hover {
+  color: var(--light);
+  background-color: var(--leafgreen);
+  border-color: var(--leafgreen);
+}

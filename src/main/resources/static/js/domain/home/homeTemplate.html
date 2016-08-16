@@ -1,0 +1,33 @@
+<div class="jumbotron">
+	<img src="img/cook-logo-h_540x259.png" alt="Cook Systems" style="width:540px; height:259px; margin-left: 6vw;">
+</div>
+
+<div class="container-fluid">
+	<div class="jumbotron smallest container col-md-6 col-md-offset-3" 
+		style="padding-left: 6vw; margin-top: 6vh; margin-bottom: 0px; border-bottom-left-radius : 0px; border-bottom-right-radius: 0px;">
+		<h2 >Welcome {{homeController.username}}</h2>
+	</div>
+    <div class="jumbotron smaller container col-md-6 col-md-offset-3" 
+    	style="background-color: var(--lightgray); margin-top: 0px;  border-top-left-radius : 0px; border-top-right-radius: 0px;">
+    	
+    	<div class="spacer"></div>
+		<div id="anonymous">
+			<div><a class="hilightgreen list-group-item col-sm-6" href="#login">Log in</a></div>
+			<div><a class="hilightgreen list-group-item col-sm-6"href="#register">Register</a></div>
+		</div>
+		
+		<div>
+			<div><a class="hilightblue list-group-item col-sm-12" href="#flights">Current Flights</a></div>
+		</div>
+		
+		<div id="userdiv">
+			<div>
+				<div><a class="hilightblue list-group-item col-sm-6" href="#flights/book">Book a flight</a></div>
+				<div><a class="hilightblue list-group-item col-sm-6" href="#itineraries/{{homeController.username}}">View Itineraries</a></div>
+			</div>
+			<div>
+				<div><a class="hilightpurple list-group-item col-sm-12" ng-click="homeController.signOut()" style="cursor: pointer;">Sign out</a></div>
+			</div>
+		</div>
+    </div>
+</div>

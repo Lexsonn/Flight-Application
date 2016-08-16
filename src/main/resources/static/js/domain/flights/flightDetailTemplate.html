@@ -1,0 +1,98 @@
+
+<div class="container col-md-5" style="padding-right: 0px; padding-left: 0px; background-color: var(--lightgray); padding-bottom: 15px; height: 100%">
+
+	<div class="jumbotron" style="padding-left: 4vw;">
+		<h2>Flight Information:</h2>
+	</div>
+
+	<div class="container">
+		<div class="dropdown">
+			<button class="btn btn-default dropdown-toggle" type="button"
+				id="flightMenu" data-toggle="dropdown" style="width: 146px;">
+				{{currentFlight}} flight       <span class="caret"></span>
+			</button>
+			<ul class="dropdown-menu">
+				<li ng-repeat="flightNum in possibleFlights"><a style="cursor: pointer;"
+					ng-click="selectFlight(flightNum)">{{flightNum}}</a></li>
+			</ul>
+		</div>
+	</div>	
+	
+	<div class="spacer"></div>
+	
+	<div>
+		<form class="form-horizontal">
+			<div class="form-group">
+				<label for="departure" class="col-sm-3 col-sm-offset-1 control-label">Departure</label>
+				<div class="col-sm-7">
+					<label class="form-control" id="departure">{{flight.departure}}</label>
+				</div>
+			</div>
+
+			<div class="form-group">
+				<label for="destination" class="col-sm-3 col-sm-offset-1 control-label">Destination</label>
+				<div class="col-sm-7">
+					<label class="form-control" id="destination">{{flight.destination}}</label>
+				</div>
+			</div>
+			
+			<div class="form-group">
+				<label for="offset" class="col-sm-3 col-sm-offset-1 control-label">Departure Time</label>
+				<div class="col-sm-7">
+					<label class="form-control" id="offset">{{flight.offset}}:00 PM</label>
+				</div>
+			</div>
+			
+			<div class="form-group" id="layoverdiv">
+				<label for="layoverTime" class="col-sm-3 col-sm-offset-1 control-label">Layover Time</label>
+				<div class="col-sm-7">
+					<label class="form-control" id="layoverTime">{{flight.layover}} hour(s)</label>
+				</div>
+			</div>
+			
+			<div class="form-group">
+				<label for="flightTime" class="col-sm-3 col-sm-offset-1 control-label">Flight Time</label>
+				<div class="col-sm-7">
+					<label class="form-control" id="flightTime">{{flight.flightTime}} hour(s)</label>
+				</div>
+			</div>
+		</form>
+	</div>
+	
+	<div class="spacer"></div>
+	
+	<div class="col-sm-12" id="multiflight" style="padding-left: 2vw;">
+		<form class="form-horizontal" style="padding-right: 3vw;">
+			<div class="form-group">
+				<label for="title" class="control-label">Total Flight Time</label>
+				<div >
+					<label class="form-control" id="title">{{flightTime}} hour(s)</label>
+				</div>
+			</div>
+
+			<div class="form-group">
+				<label for="userHits" class="control-label">Total Layover Time</label>
+				<div>
+					<label class="form-control" id="userHits">{{layoverTime}} hour(s)</label>
+				</div>
+			</div>
+		</form>
+	</div>
+	
+	<div class="col-sm-6" id="bookdiv">
+		<button  ng-click="flightDetailController.book()" type="submit" class="btn btn-primary btn-large">
+			<i class="fa fa-plane" aria-hidden="true"></i>  Book this flight!
+		</button>
+	</div>
+	
+	<div class="col-sm-6">
+         <button type="submit" class="btn" ng-click="returnHome()" style="width: 146px; color: #FFF;">
+         	<i class="fa fa-home" aria-hidden="true" style="color: #FFF;"></i> Home
+         </button>
+    </div>
+</div>
+
+<div class="col-md-7" style="padding-right: 0px; padding-left: 0px;">
+	<div id="map"></div>
+</div>
+

@@ -1,0 +1,28 @@
+	<div class="container-fluid" id="adminlogin">
+	<div class="col-md-12">
+		<div class="jumbotron smaller topper container" 
+			style="padding-left: 6vw; margin-top: 6vh; margin-bottom: 0px; border-bottom-left-radius : 0px; border-bottom-right-radius: 0px;">
+			<h1>{{username}} Itineraries</h1>
+		</div>
+		<div class="jumbotron bottom container" style="padding-top: 15px; border-top-left-radius : 0px; border-top-right-radius: 0px; background-color: var(--lightgray);">
+			<div>
+				<div class="col-xs-8"><h3><span class="glyphicon glyphicon-globe" aria-hidden="true"> </span>     Flights:</h3></div>
+				<div class="col-xs-4"><h3>Total Travel Time:</h3></div>
+			</div>
+			
+			<div class="list-group">
+				<div ng-repeat="itinerary in itineraries">
+					<div class="col-xs-8">
+						<a class="hilightblue list-group-item" ng-href="#itinerary/view/{{itinerary.id}}">
+							<span class="glyphicon glyphicon-map-marker" aria-hidden="true"> </span> 
+							{{' ' + itinerary.origin}} to {{itinerary.destination}}
+						</a>
+					</div>
+					<div class="col-xs-4">
+						<a class="list-group-item" >{{itinerary.totalTime}} hour(s)</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

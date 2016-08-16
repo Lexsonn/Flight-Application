@@ -1,0 +1,41 @@
+<div class="jumbotron" style="padding-left: 6vw;">
+	<h1>Available Flights</h1>
+</div>
+
+<div class="container-fluid">
+	<div class="col-lg-12">
+		
+		<div class="spacer"></div> 
+		<div class="jumbotron smaller col-md-10 col-md-offset-1 container" 
+			style="margin-bottom: 0px; border-bottom-left-radius : 0px; border-bottom-right-radius: 0px;">
+			<div>
+				<button ng-click="flightController.goToMap()" type="submit" class="btn btn-primary btn-large">
+					<i class="fa fa-globe" aria-hidden="true"></i>  View on map
+				</button>
+			</div>
+		
+		</div>
+		<div class="jumbotron smaller col-md-10 col-md-offset-1 container" 
+			style="padding-top: 15px; background-color: var(--lightgray); border-top-left-radius : 0px; border-top-right-radius: 0px;">
+			
+			<div>
+				<div class="col-xs-8"><h3><span class="glyphicon glyphicon-globe" aria-hidden="true"> </span>     Flights:</h3></div>
+				<div class="col-xs-4"><h3>Flight Information:</h3></div>
+			</div>
+			
+			<div class="list-group">
+				<div ng-repeat="flight in flights">
+					<div class="col-xs-8">
+						<a class="hilightblue list-group-item" ng-href="#flights/get/{{flight.origin}}/{{flight.destination}}">
+							<span class="glyphicon glyphicon-map-marker" aria-hidden="true"> </span> 
+							{{' ' + flight.origin}} to {{flight.destination}}
+						</a>
+					</div>
+					<div class="col-xs-4">
+						<a class="list-group-item" >{{flight.offset}}:00 PM, {{flight.flightTime}} hour(s)</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

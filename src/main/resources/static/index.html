@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html ng-app="app">
+<head>
+    <meta charset="ISO-8859-1">
+    <title>Example</title>
+    
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAWbiIw-BcxMf5fWjsjyJvGfn6h1ezXj_Q&libraries=geometry"></script>
+    
+    <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+    <script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular-route.js"></script>
+    
+	<script src="dist/swal/sweetalert.min.js"></script>
+	
+	<link rel="stylesheet" type="text/css" href="dist/fa/css/font-awesome.min.css">
+	<link rel="stylesheet" type="text/css" href="dist/swal/sweetalert.css">
+    <link href="css/coreStyle.css" rel="stylesheet">
+    <link href="css/form-elements.css" rel="stylesheet" id="register-form">
+	<link href="css/styles.css" rel="stylesheet" id="register-style">
+    
+    <script src="js/core/app.js"></script>
+    <script src="js/core/constants.js"></script>
+        
+    <script src="js/core/routes.js"></script>
+    
+    <script src="js/core/UpdateService.js"></script>
+    <script src="js/domain/user/UserService.js"></script>
+    <script src="js/domain/map/MapService.js"></script>
+    <script src="js/domain/flights/FlightService.js"></script>
+    
+    <script src="js/domain/map/MapController.js"></script>
+    <script src="js/domain/register/RegisterController.js"></script>
+    <script src="js/domain/flights/BookController.js"></script>
+    <script src="js/domain/flights/FlightController.js"></script>
+    <script src="js/domain/flights/FlightDetailController.js"></script>   
+    <script src="js/domain/itinerary/ItineraryController.js"></script>
+    <script src="js/domain/itinerary/ItineraryDetailController.js"></script>
+    <script src="js/domain/home/HomeController.js"></script>
+    
+</head>
+<body>
+	<ng-view></ng-view>
+</body>
+</html>
